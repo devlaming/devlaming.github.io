@@ -159,20 +159,46 @@ window.Quarto = {
    
   <ul>
   <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#numbers" id="toc-numbers" class="nav-link" data-scroll-target="#numbers">Numbers</a>
+  <ul class="collapse">
   <li><a href="#a-world-of-ideas" id="toc-a-world-of-ideas" class="nav-link" data-scroll-target="#a-world-of-ideas">A world of ideas</a></li>
   <li><a href="#whole-numbers" id="toc-whole-numbers" class="nav-link" data-scroll-target="#whole-numbers">Whole numbers</a>
   <ul class="collapse">
   <li><a href="#counts" id="toc-counts" class="nav-link" data-scroll-target="#counts">Counts</a></li>
-  <li><a href="#counting-systems" id="toc-counting-systems" class="nav-link" data-scroll-target="#counting-systems">Counting systems</a>
-  <ul class="collapse">
-  <li><a href="#decimal-counting-system" id="toc-decimal-counting-system" class="nav-link" data-scroll-target="#decimal-counting-system">Decimal counting system</a></li>
-  <li><a href="#binary-counting-system" id="toc-binary-counting-system" class="nav-link" data-scroll-target="#binary-counting-system">Binary counting system</a></li>
-  </ul></li>
+  <li><a href="#counting-systems" id="toc-counting-systems" class="nav-link" data-scroll-target="#counting-systems">Counting systems</a></li>
   <li><a href="#negative-numbers" id="toc-negative-numbers" class="nav-link" data-scroll-target="#negative-numbers">Negative numbers</a></li>
   <li><a href="#infinity" id="toc-infinity" class="nav-link" data-scroll-target="#infinity">Infinity</a></li>
   </ul></li>
   <li><a href="#rational-numbers" id="toc-rational-numbers" class="nav-link" data-scroll-target="#rational-numbers">Rational numbers</a></li>
   <li><a href="#irrational-numbers-and-real-numbers" id="toc-irrational-numbers-and-real-numbers" class="nav-link" data-scroll-target="#irrational-numbers-and-real-numbers">Irrational numbers and real numbers</a></li>
+  </ul></li>
+  <li><a href="#variables-and-expressions" id="toc-variables-and-expressions" class="nav-link" data-scroll-target="#variables-and-expressions">Variables and expressions</a></li>
+  <li><a href="#algebra" id="toc-algebra" class="nav-link" data-scroll-target="#algebra">Algebra</a>
+  <ul class="collapse">
+  <li><a href="#variables-and-expressions-1" id="toc-variables-and-expressions-1" class="nav-link" data-scroll-target="#variables-and-expressions-1">Variables and expressions</a></li>
+  <li><a href="#operators-and-order-of-operations" id="toc-operators-and-order-of-operations" class="nav-link" data-scroll-target="#operators-and-order-of-operations">Operators and order of operations</a></li>
+  <li><a href="#simplifying-expressions" id="toc-simplifying-expressions" class="nav-link" data-scroll-target="#simplifying-expressions">Simplifying expressions</a></li>
+  </ul></li>
+  <li><a href="#equations-and-inequalities" id="toc-equations-and-inequalities" class="nav-link" data-scroll-target="#equations-and-inequalities">Equations and inequalities</a>
+  <ul class="collapse">
+  <li><a href="#solving-linear-equations" id="toc-solving-linear-equations" class="nav-link" data-scroll-target="#solving-linear-equations">Solving linear equations</a></li>
+  <li><a href="#solving-quadratic-equations" id="toc-solving-quadratic-equations" class="nav-link" data-scroll-target="#solving-quadratic-equations">Solving quadratic equations</a></li>
+  <li><a href="#simplifying-equations" id="toc-simplifying-equations" class="nav-link" data-scroll-target="#simplifying-equations">Simplifying equations</a></li>
+  <li><a href="#simplifying-inequalities" id="toc-simplifying-inequalities" class="nav-link" data-scroll-target="#simplifying-inequalities">Simplifying inequalities</a></li>
+  </ul></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
+  <ul class="collapse">
+  <li><a href="#domain" id="toc-domain" class="nav-link" data-scroll-target="#domain">Domain</a></li>
+  <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
+  <li><a href="#finding-the-roots-of-a-function" id="toc-finding-the-roots-of-a-function" class="nav-link" data-scroll-target="#finding-the-roots-of-a-function">Finding the roots of a function</a></li>
+  </ul></li>
+  <li><a href="#set-theory" id="toc-set-theory" class="nav-link" data-scroll-target="#set-theory">Set theory</a></li>
+  <li><a href="#summation-and-product-operator" id="toc-summation-and-product-operator" class="nav-link" data-scroll-target="#summation-and-product-operator">Summation and product operator</a>
+  <ul class="collapse">
+  <li><a href="#indices" id="toc-indices" class="nav-link" data-scroll-target="#indices">Indices</a></li>
+  <li><a href="#summation-operator" id="toc-summation-operator" class="nav-link" data-scroll-target="#summation-operator">Summation operator</a></li>
+  <li><a href="#product-operator" id="toc-product-operator" class="nav-link" data-scroll-target="#product-operator">Product operator</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -206,33 +232,37 @@ window.Quarto = {
 
 <section id="outline" class="level1">
 <h1>Outline</h1>
-<p>This week, we start with a careful treatment of mathematical concepts you have learnt about in high school. Specifically, we discuss numbers and variables. What are integers, what are real numbers, and so on? And what are variables in mathematics? And why are they useful?</p>
-<p>With those concepts in place, we can talk about expressions and arithmetic: operators, such as addition, multiplication, and exponentiation, and in which order to apply them when evaluating or simplifying an expression. The first part of this week, we wrap up with some useful results, that can help you simplify expressions.</p>
+<p>This week, we start with a careful treatment of mathematical concepts you have learnt about in high school. Specifically, we begin the by discussing numbers. What are integers, real numbers, and so on? And what are variables in mathematics, and why are they useful? With those concepts in place, we can talk about algebra: expressions involving numbers, variables, and operators, such as addition and multiplication, and exponentiation. How to evaluate and simplify such expression?</p>
+<p>Next, we can look at equalities and inequalities: if two expressions are equal, then what can we learn about the underlying variables? Specifically, we consider solving linear and quadratic equations. And what if one expression is know to be larger than the other? What can we learn in that case about certain variables?</p>
+<p>After that, we turn our attention to functions: why are they useful? what is the right notation? And what are things like the domain and image of a function? With those concepts in place, we can look at finding roots of a function, which actually boils down to solving an equation.</p>
+<p>Finally, we go into set theory and indices, and use that to formulate so-called aggregation operators, such as the summation and product operator.</p>
 </section>
-<section id="a-world-of-ideas" class="level1">
-<h1>A world of ideas</h1>
+<section id="numbers" class="level1">
+<h1>Numbers</h1>
+<section id="a-world-of-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="a-world-of-ideas">A world of ideas</h2>
 <p>Much of mathematics considers idealised objects and their properties (e.g., the perfect circle, with radius <span class="math inline">\(r\)</span>, for which the area is given by <span class="math inline">\(A=\pi r^2\)</span>). These idealised objects often do not exist in the real world. Yet, both the origins as well as the applications of many notions in mathematics, in the end, lie in the real world. But how can an idealised concept be relevant in the real world, given that the real world is never perfect?</p>
 <p>The reason for this is quite simple: many everyday phenomena and objects can be approximated really well by idealised objects, of which we know the properties.</p>
 </section>
-<section id="whole-numbers" class="level1">
-<h1>Whole numbers</h1>
-<section id="counts" class="level2">
-<h2 class="anchored" data-anchor-id="counts">Counts</h2>
+<section id="whole-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="whole-numbers">Whole numbers</h2>
+<section id="counts" class="level3">
+<h3 class="anchored" data-anchor-id="counts">Counts</h3>
 <p>One of the simplest idealised objects in mathematics is a whole number, resulting from a count. The concept of whole numbers and being able to reason about them has a long history: even in our early stages as hunter-gatherers, it was extremely useful (in fact, critical to our survival) to be able to count, for instance, how many apples your tribe had collected, how many your tribe ate each day, and, hence, when the current stock would be depleted. Perhaps somewhat unsurprisingly, many animals seem to have a rudimentary understanding of numbers: </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/HfoQEUm4drk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
 <p>So what’s idealised about whole numbers? Considering the case of counting apples, what if a fellow hunter-gatherer had so much appetite that she took a bit out of one the apples that you collected. Is that still an apple? To some degree: it depends… Was it a big bite? Or only a really small bite? And how about small vs.&nbsp;big apples? Perhaps five big apples provide more nutrition than six small apples. Clearly, the number one has relies on some idealised notion of what counts as a real apple and what does not. To make matters worse, some things are rather hard to count in a discrete fashion (e.g., the time from sunrise until sunset).</p>
 <p>Yet, despite the fact that whole numbers can be thought of as counts of idealised, discrete units, its practical merits are undeniable. For instance, we can count how many students show up for a tutorial, without there being any ambiguity in that count. That count reflects a real-world <em>fact</em> that we can all, as reasonable beings, agree on.</p>
 </section>
-<section id="counting-systems" class="level2">
-<h2 class="anchored" data-anchor-id="counting-systems">Counting systems</h2>
-<section id="decimal-counting-system" class="level3">
-<h3 class="anchored" data-anchor-id="decimal-counting-system">Decimal counting system</h3>
+<section id="counting-systems" class="level3">
+<h3 class="anchored" data-anchor-id="counting-systems">Counting systems</h3>
+<section id="decimal-counting-system" class="level4">
+<h4 class="anchored" data-anchor-id="decimal-counting-system">Decimal counting system</h4>
 <p>The way in which we count evolved using our fingers. For instance, in many cultures, the number of extended fingers reflects a count which can, thus, range from zero to ten: </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/g9S6qD_Wylw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
 <p>To these numbers we have learnt to assign written symbols, such as <span class="math inline">\(0,1,2,3,4,5,6,7,8,9,10\)</span>, where each subsequent symbol means your count has increased by exactly one. However, being able to count only to ten is too limited. Hence, we started combining multiple symbols, as you already see in the number <span class="math inline">\(10\)</span>—in our so-called base-<span class="math inline">\(10\)</span> or decimal system, <span class="math inline">\(9\)</span> is the highest single-digit number. If we add one to that, we simply write down a new digit on the left, which we initialise at <span class="math inline">\(1\)</span>, while the the right digit is reset to <span class="math inline">\(0\)</span>. Hence, we end up with <span class="math inline">\(10\)</span>.</p>
 <p>Once we reach <span class="math inline">\(19\)</span>, increasing that number by one means that we have again exhausted our symbols for the last digit. So we increase the left digit by one, and reset the right digit to zero, yielding <span class="math inline">\(20\)</span>. This process can be repeated until we reach <span class="math inline">\(99\)</span>: both digits have reached the largest value.</p>
 <p>How to add one to that number? We simply write down yet another digit on the left, and reset all other digits to <span class="math inline">\(0\)</span>. Hence, we get <span class="math inline">\(100\)</span>. This process can be repeated to reach extremely large numbers, with only a limited number of digits. For instance, with just 80 subsequent digits, we could write down <a href="https://en.wikipedia.org/wiki/Eddington_number">how many protons there are in the entire observable universe</a>.</p>
 </section>
-<section id="binary-counting-system" class="level3">
-<h3 class="anchored" data-anchor-id="binary-counting-system">Binary counting system</h3>
+<section id="binary-counting-system" class="level4">
+<h4 class="anchored" data-anchor-id="binary-counting-system">Binary counting system</h4>
 <p>At a fundamental level, computers, smartphones, and other electronic devices do not have ten fingers to keep track of quantities. Instead, information is stored and manipulated in the form of bits, which can be thought of as on/off-switches, in which we consider ‘on’ as being one unit more than ‘off’. This means the natural counting system for a computer is binary: each digit can be either <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, where <span class="math inline">\(0\)</span> is the smallest digit and <span class="math inline">\(1\)</span> the largest digit. And if we add one to that largest digit, we simply do so by introducing a new digit on the left, which we initialise at <span class="math inline">\(1\)</span>, while reseting the digit on the right to <span class="math inline">\(0\)</span>, and so on.</p>
 <table class="table-striped table-hover caption-top table">
 <caption>Subsequent numbers using the decimal system vs.&nbsp;the binary system</caption>
@@ -291,28 +321,105 @@ window.Quarto = {
 </table>
 </section>
 </section>
-<section id="negative-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="negative-numbers">Negative numbers</h2>
+<section id="negative-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="negative-numbers">Negative numbers</h3>
 <p>Similar to counts being useful, so are negative whole numbers. Yet, it took us some quite some time to formalise the notion of a negative whole number. Have you, for instance, ever encountered a negative number of bicycles in Amsterdam, or anywhere else?</p>
 <p>Nevertheless, tba</p>
 </section>
-<section id="infinity" class="level2">
-<h2 class="anchored" data-anchor-id="infinity">Infinity</h2>
+<section id="infinity" class="level3">
+<h3 class="anchored" data-anchor-id="infinity">Infinity</h3>
 <p>tba</p>
 <p>Notation all integers, all the way from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>: <span class="math inline">\(\mathbb{Z}\)</span></p>
 </section>
 </section>
-<section id="rational-numbers" class="level1">
-<h1>Rational numbers</h1>
+<section id="rational-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="rational-numbers">Rational numbers</h2>
 <p>tba</p>
 <p>Notation <span class="math inline">\(\mathbb{Q}\)</span></p>
 </section>
-<section id="irrational-numbers-and-real-numbers" class="level1">
-<h1>Irrational numbers and real numbers</h1>
+<section id="irrational-numbers-and-real-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="irrational-numbers-and-real-numbers">Irrational numbers and real numbers</h2>
 <p>tba</p>
 <p>Notation <span class="math inline">\(\mathbb{R}\)</span></p>
+</section>
+</section>
+<section id="variables-and-expressions" class="level1">
+<h1>Variables and expressions</h1>
+<p>tba</p>
+</section>
+<section id="algebra" class="level1">
+<h1>Algebra</h1>
+<p>tba</p>
+<section id="variables-and-expressions-1" class="level2">
+<h2 class="anchored" data-anchor-id="variables-and-expressions-1">Variables and expressions</h2>
+<p>tba</p>
+</section>
+<section id="operators-and-order-of-operations" class="level2">
+<h2 class="anchored" data-anchor-id="operators-and-order-of-operations">Operators and order of operations</h2>
+<p>tba</p>
+</section>
+<section id="simplifying-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="simplifying-expressions">Simplifying expressions</h2>
+<p>tba</p>
+</section>
+</section>
+<section id="equations-and-inequalities" class="level1">
+<h1>Equations and inequalities</h1>
+<p>tba</p>
+<section id="solving-linear-equations" class="level2">
+<h2 class="anchored" data-anchor-id="solving-linear-equations">Solving linear equations</h2>
+<p>tba</p>
+</section>
+<section id="solving-quadratic-equations" class="level2">
+<h2 class="anchored" data-anchor-id="solving-quadratic-equations">Solving quadratic equations</h2>
+<p>tba</p>
+</section>
+<section id="simplifying-equations" class="level2">
+<h2 class="anchored" data-anchor-id="simplifying-equations">Simplifying equations</h2>
+<p>tba</p>
+</section>
+<section id="simplifying-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="simplifying-inequalities">Simplifying inequalities</h2>
+<p>tba</p>
+</section>
+</section>
+<section id="functions" class="level1">
+<h1>Functions</h1>
+<p>tba</p>
+<section id="domain" class="level2">
+<h2 class="anchored" data-anchor-id="domain">Domain</h2>
+<p>tba</p>
+</section>
+<section id="image" class="level2">
+<h2 class="anchored" data-anchor-id="image">Image</h2>
+<p>tba</p>
+</section>
+<section id="finding-the-roots-of-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="finding-the-roots-of-a-function">Finding the roots of a function</h2>
+<p>tba</p>
+</section>
+</section>
+<section id="set-theory" class="level1">
+<h1>Set theory</h1>
+<p>tba</p>
+</section>
+<section id="summation-and-product-operator" class="level1">
+<h1>Summation and product operator</h1>
+<p>tba</p>
+<section id="indices" class="level2">
+<h2 class="anchored" data-anchor-id="indices">Indices</h2>
+<p>tba</p>
+</section>
+<section id="summation-operator" class="level2">
+<h2 class="anchored" data-anchor-id="summation-operator">Summation operator</h2>
+<p>tba</p>
+</section>
+<section id="product-operator" class="level2">
+<h2 class="anchored" data-anchor-id="product-operator">Product operator</h2>
+<p>tba</p>
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>Ronald de Vlaming. 2024. All Rights Reserved</div></div></section></div></main> <!-- /main -->
