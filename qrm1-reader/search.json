@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reader QRM1",
+    "section": "",
+    "text": "Welcome to the reader of Quantitative Research Methods 1 (E_EBE1_QRM1)! The reader is organised per week. If you have spotted an error, please send an e-mail to r.devlaming@vu.nl.\n\nCourse at a glance\nThe bachelor Economics and Business Economics (EBE) comprises three core academic courses, namely, Quantitative Research Methods (QRM) 1, QRM2, and QRM3, which are taught in the 1st, 2nd, and 3rd year respectively. In these courses, you develop mathematical and statistical skills that are crucial to answering questions in economics and business in a meaningfull, quantitative manner.\nWhile QRM2 and QRM3 pay much attention to statistics, econometrics, and their applications, QRM1 is a more fundamental course, in which you learn about mathematics, linear algebra, and calculus. Thus, QRM2 and QRM3, as well as many other courses in the EBE bachelor, build on the knowledge you acquire in this course.\n\n\nYour teacher’s objective\nMy primary objective is for you to develop the mathematical skills that you need to succeed throughout the bachelor and beyond. However, I also have a second, somewhat more ambitious aim: maths and reading skills have been steadily declining in the past twenty years or so (add pisa figure). There are many reasons for this decline, most of which are beyond my control as a teacher.\nHowever, one thing I do have control over: the way you learn to tackle maths problems. There has been a broad push to offer different tricks to solve similar problems. In my view, there are four issues with such tricks: (1) they tend to not work so well in slightly more complicated cases; (2) they false suggest some kind of à-la-carte menu for solving age-old problems; (3) universal solution strategies are swamped by these ‘alternatives’; and (4) they set the unrealistic expectation that all strategies should be intuitive and straightforward from beginning until the end.\nTo solve a particular type of problem (e.g., finding the derivative of the ratio of two functions), I strongly prefer you learn to apply a small set of good tools really well, rather than superficially learning about a whole range of alternative solution strategies.\nInevitably, some of these tools may not be intuitive right away, and perhaps they never will be. But at least they are correct for the general case. The way you learn to use the tools in this course, is not by deve\n\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  },
+  {
+    "objectID": "week6.html",
+    "href": "week6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "tba\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  },
+  {
+    "objectID": "week4.html",
+    "href": "week4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "tba\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "tba\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  },
+  {
+    "objectID": "week1.html",
+    "href": "week1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "This week, we start with a careful treatment of mathematical concepts you have learnt about in high school. Specifically, we discuss numbers and variables. What are integers, what are real numbers, and so on? And what are variables in mathematics? And why are they useful?\nWith those concepts in place, we can talk about expressions and arithmetic: operators, such as addition, multiplication, and exponentiation, and in which order to apply them when evaluating or simplifying an expression. The first part of this week, we wrap up with some useful results, that can help you simplify expressions."
+  },
+  {
+    "objectID": "week1.html#counts",
+    "href": "week1.html#counts",
+    "title": "Week 1",
+    "section": "Counts",
+    "text": "Counts\nOne of the simplest idealised objects in mathematics is a whole number, resulting from a count. The concept of whole numbers and being able to reason about them has a long history: even in our early stages as hunter-gatherers, it was extremely useful (in fact, critical to our survival) to be able to count, for instance, how many apples your tribe had collected, how many your tribe ate each day, and, hence, when the current stock would be depleted. Perhaps somewhat unsurprisingly, many animals seem to have a rudimentary understanding of numbers: \nSo what’s idealised about whole numbers? Considering the case of counting apples, what if a fellow hunter-gatherer had so much appetite that she took a bit out of one the apples that you collected. Is that still an apple? To some degree: it depends… Was it a big bite? Or only a really small bite? And how about small vs. big apples? Perhaps five big apples provide more nutrition than six small apples. Clearly, the number one has relies on some idealised notion of what counts as a real apple and what does not. To make matters worse, some things are rather hard to count in a discrete fashion (e.g., the time from sunrise until sunset).\nYet, despite the fact that whole numbers can be thought of as counts of idealised, discrete units, its practical merits are undeniable. For instance, we can count how many students show up for a tutorial, without there being any ambiguity in that count. That count reflects a real-world fact that we can all, as reasonable beings, agree on."
+  },
+  {
+    "objectID": "week1.html#counting-systems",
+    "href": "week1.html#counting-systems",
+    "title": "Week 1",
+    "section": "Counting systems",
+    "text": "Counting systems\n\nDecimal counting system\nThe way in which we count evolved using our fingers. For instance, in many cultures, the number of extended fingers reflects a count which can, thus, range from zero to ten: \nTo these numbers we have learnt to assign written symbols, such as \\(0,1,2,3,4,5,6,7,8,9,10\\), where each subsequent symbol means your count has increased by exactly one. However, being able to count only to ten is too limited. Hence, we started combining multiple symbols, as you already see in the number \\(10\\)—in our so-called base-\\(10\\) or decimal system, \\(9\\) is the highest single-digit number. If we add one to that, we simply write down a new digit on the left, which we initialise at \\(1\\), while the the right digit is reset to \\(0\\). Hence, we end up with \\(10\\).\nOnce we reach \\(19\\), increasing that number by one means that we have again exhausted our symbols for the last digit. So we increase the left digit by one, and reset the right digit to zero, yielding \\(20\\). This process can be repeated until we reach \\(99\\): both digits have reached the largest value.\nHow to add one to that number? We simply write down yet another digit on the left, and reset all other digits to \\(0\\). Hence, we get \\(100\\). This process can be repeated to reach extremely large numbers, with only a limited number of digits. For instance, with just 80 subsequent digits, we could write down how many protons there are in the entire observable universe.\n\n\nBinary counting system\nAt a fundamental level, computers, smartphones, and other electronic devices do not have ten fingers to keep track of quantities. Instead, information is stored and manipulated in the form of bits, which can be thought of as on/off-switches, in which we consider ‘on’ as being one unit more than ‘off’. This means the natural counting system for a computer is binary: each digit can be either \\(0\\) or \\(1\\), where \\(0\\) is the smallest digit and \\(1\\) the largest digit. And if we add one to that largest digit, we simply do so by introducing a new digit on the left, which we initialise at \\(1\\), while reseting the digit on the right to \\(0\\), and so on.\n\nSubsequent numbers using the decimal system vs. the binary system\n\n\nDecimal\nBinary\n\n\n\n\n0\n0\n\n\n1\n1\n\n\n2\n10\n\n\n3\n11\n\n\n4\n100\n\n\n5\n101\n\n\n6\n110\n\n\n7\n111\n\n\n8\n1000\n\n\n9\n1001\n\n\n10\n1010"
+  },
+  {
+    "objectID": "week1.html#negative-numbers",
+    "href": "week1.html#negative-numbers",
+    "title": "Week 1",
+    "section": "Negative numbers",
+    "text": "Negative numbers\nSimilar to counts being useful, so are negative whole numbers. Yet, it took us some quite some time to formalise the notion of a negative whole number. Have you, for instance, ever encountered a negative number of bicycles in Amsterdam, or anywhere else?\nNevertheless, tba"
+  },
+  {
+    "objectID": "week1.html#infinity",
+    "href": "week1.html#infinity",
+    "title": "Week 1",
+    "section": "Infinity",
+    "text": "Infinity\ntba\nNotation all integers, all the way from \\(-\\infty\\) to \\(\\infty\\): \\(\\mathbb{Z}\\)"
+  },
+  {
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "tba\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  },
+  {
+    "objectID": "week5.html",
+    "href": "week5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "tba\n\n\n\nCopyrightRonald de Vlaming. 2024. All Rights Reserved"
+  }
+]
