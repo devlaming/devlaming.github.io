@@ -161,7 +161,7 @@ window.Quarto = {
   <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
   <li><a href="#numbers" id="toc-numbers" class="nav-link" data-scroll-target="#numbers">Numbers</a>
   <ul class="collapse">
-  <li><a href="#a-world-of-ideas" id="toc-a-world-of-ideas" class="nav-link" data-scroll-target="#a-world-of-ideas">A world of ideas</a></li>
+  <li><a href="#mathematics-as-a-world-of-ideas" id="toc-mathematics-as-a-world-of-ideas" class="nav-link" data-scroll-target="#mathematics-as-a-world-of-ideas">Mathematics as a world of ideas</a></li>
   <li><a href="#whole-numbers" id="toc-whole-numbers" class="nav-link" data-scroll-target="#whole-numbers">Whole numbers</a>
   <ul class="collapse">
   <li><a href="#counts" id="toc-counts" class="nav-link" data-scroll-target="#counts">Counts</a></li>
@@ -175,8 +175,10 @@ window.Quarto = {
   <li><a href="#variables-and-expressions" id="toc-variables-and-expressions" class="nav-link" data-scroll-target="#variables-and-expressions">Variables and expressions</a></li>
   <li><a href="#algebra" id="toc-algebra" class="nav-link" data-scroll-target="#algebra">Algebra</a>
   <ul class="collapse">
+  <li><a href="#mathematics-as-a-language" id="toc-mathematics-as-a-language" class="nav-link" data-scroll-target="#mathematics-as-a-language">Mathematics as a language</a></li>
   <li><a href="#variables-and-expressions-1" id="toc-variables-and-expressions-1" class="nav-link" data-scroll-target="#variables-and-expressions-1">Variables and expressions</a></li>
   <li><a href="#operators-and-order-of-operations" id="toc-operators-and-order-of-operations" class="nav-link" data-scroll-target="#operators-and-order-of-operations">Operators and order of operations</a></li>
+  <li><a href="#inverse-operations" id="toc-inverse-operations" class="nav-link" data-scroll-target="#inverse-operations">Inverse operations</a></li>
   <li><a href="#simplifying-expressions" id="toc-simplifying-expressions" class="nav-link" data-scroll-target="#simplifying-expressions">Simplifying expressions</a></li>
   </ul></li>
   <li><a href="#equations-and-inequalities" id="toc-equations-and-inequalities" class="nav-link" data-scroll-target="#equations-and-inequalities">Equations and inequalities</a>
@@ -191,6 +193,7 @@ window.Quarto = {
   <li><a href="#domain" id="toc-domain" class="nav-link" data-scroll-target="#domain">Domain</a></li>
   <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
   <li><a href="#finding-the-roots-of-a-function" id="toc-finding-the-roots-of-a-function" class="nav-link" data-scroll-target="#finding-the-roots-of-a-function">Finding the roots of a function</a></li>
+  <li><a href="#inverse-functions" id="toc-inverse-functions" class="nav-link" data-scroll-target="#inverse-functions">Inverse functions</a></li>
   </ul></li>
   <li><a href="#set-theory" id="toc-set-theory" class="nav-link" data-scroll-target="#set-theory">Set theory</a></li>
   <li><a href="#summation-and-product-operator" id="toc-summation-and-product-operator" class="nav-link" data-scroll-target="#summation-and-product-operator">Summation and product operator</a>
@@ -233,14 +236,14 @@ window.Quarto = {
 <section id="outline" class="level1">
 <h1>Outline</h1>
 <p>This week, we start with a careful treatment of mathematical concepts you have learnt about in high school. Specifically, we begin the by discussing numbers. What are integers, real numbers, and so on? And what are variables in mathematics, and why are they useful? With those concepts in place, we can talk about algebra: expressions involving numbers, variables, and operators, such as addition and multiplication, and exponentiation. How to evaluate and simplify such expression?</p>
-<p>Next, we can look at equalities and inequalities: if two expressions are equal, then what can we learn about the underlying variables? Specifically, we consider solving linear and quadratic equations. And what if one expression is know to be larger than the other? What can we learn in that case about certain variables?</p>
-<p>After that, we turn our attention to functions: why are they useful? what is the right notation? And what are things like the domain and image of a function? With those concepts in place, we can look at finding roots of a function, which actually boils down to solving an equation.</p>
-<p>Finally, we go into set theory and indices, and use that to formulate so-called aggregation operators, such as the summation and product operator.</p>
+<p>Next, we can look at equalities and inequalities: if two expressions are equal, then what can we learn about the underlying variables? Specifically, we consider solving linear and quadratic equations. And what if one expression is know to be larger than the other? What can we learn, in that case, about certain variables?</p>
+<p>After that, we turn our attention to functions: why are they useful? what is the right notation? And what are things like the domain and image of a function? With those concepts in place, we can look at finding roots of a function, which actually boils down to simply solving equations.</p>
+<p>Finally, we go a little bit into set theory and indices, and use that to formulate so-called aggregation operators, such as the summation and product operator.</p>
 </section>
 <section id="numbers" class="level1">
 <h1>Numbers</h1>
-<section id="a-world-of-ideas" class="level2">
-<h2 class="anchored" data-anchor-id="a-world-of-ideas">A world of ideas</h2>
+<section id="mathematics-as-a-world-of-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="mathematics-as-a-world-of-ideas">Mathematics as a world of ideas</h2>
 <p>Much of mathematics considers idealised objects and their properties (e.g., the perfect circle, with radius <span class="math inline">\(r\)</span>, for which the area is given by <span class="math inline">\(A=\pi r^2\)</span>). These idealised objects often do not exist in the real world. Yet, both the origins as well as the applications of many notions in mathematics, in the end, lie in the real world. But how can an idealised concept be relevant in the real world, given that the real world is never perfect?</p>
 <p>The reason for this is quite simple: many everyday phenomena and objects can be approximated really well by idealised objects, of which we know the properties.</p>
 </section>
@@ -249,8 +252,9 @@ window.Quarto = {
 <section id="counts" class="level3">
 <h3 class="anchored" data-anchor-id="counts">Counts</h3>
 <p>One of the simplest idealised objects in mathematics is a whole number, resulting from a count. The concept of whole numbers and being able to reason about them has a long history: even in our early stages as hunter-gatherers, it was extremely useful (in fact, critical to our survival) to be able to count, for instance, how many apples your tribe had collected, how many your tribe ate each day, and, hence, when the current stock would be depleted. Perhaps somewhat unsurprisingly, many animals seem to have a rudimentary understanding of numbers: </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/HfoQEUm4drk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
-<p>So what’s idealised about whole numbers? Considering the case of counting apples, what if a fellow hunter-gatherer had so much appetite that she took a bit out of one the apples that you collected. Is that still an apple? To some degree: it depends… Was it a big bite? Or only a really small bite? And how about small vs.&nbsp;big apples? Perhaps five big apples provide more nutrition than six small apples. Clearly, the number one has relies on some idealised notion of what counts as a real apple and what does not. To make matters worse, some things are rather hard to count in a discrete fashion (e.g., the time from sunrise until sunset).</p>
-<p>Yet, despite the fact that whole numbers can be thought of as counts of idealised, discrete units, its practical merits are undeniable. For instance, we can count how many students show up for a tutorial, without there being any ambiguity in that count. That count reflects a real-world <em>fact</em> that we can all, as reasonable beings, agree on.</p>
+<p>Such whole numbers are often referred to as <em>natural numbers</em>. The complete set of natural numbers, starting at zero, and increasing by one at a time, without end, is sometimes denoted by <span class="math inline">\(\mathbb{N}\)</span>. That is, <span class="math inline">\(\mathbb{N}\)</span> consists of the numbers <span class="math inline">\(0,1,2,3,\ldots\)</span>, where the dots signify that the numbers just keep on increasing.</p>
+<p>So what’s idealised about natural numbers? Considering the case of counting apples, what if a fellow hunter-gatherer had so much appetite that she took a bit out of one the apples that you collected. Is that still an apple? To some degree: it depends… Was it a big bite? Or only a really small bite? And how about small vs.&nbsp;big apples? Perhaps five big apples provide more nutrition than six small apples. Clearly, the number one has relies on some idealised notion of what counts as a real apple and what does not. To make matters worse, some things are rather hard to count in a discrete fashion (e.g., the time from sunrise until sunset).</p>
+<p>Yet, despite the fact that natural numbers can be thought of as counts of idealised, discrete units, its practical merits are undeniable. For instance, we can count how many students show up for a tutorial, without there being any ambiguity in that count. That count reflects a real-world <em>fact</em> that we can all, as reasonable beings, agree on.</p>
 </section>
 <section id="counting-systems" class="level3">
 <h3 class="anchored" data-anchor-id="counting-systems">Counting systems</h3>
@@ -323,24 +327,41 @@ window.Quarto = {
 </section>
 <section id="negative-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="negative-numbers">Negative numbers</h3>
-<p>Similar to counts being useful, so are negative whole numbers. Yet, it took us some quite some time to formalise the notion of a negative whole number. Have you, for instance, ever encountered a negative number of bicycles in Amsterdam, or anywhere else?</p>
-<p>Nevertheless, tba</p>
+<p>Since numbers evolved from counting physical objects, it took mathematicians a long time to grasp the concept of <em>negative numbers</em>. After all, you cannot have a negative number of apples. Thus, equations (more on that later) with negative solutions (e.g., <span class="math inline">\(4x + 20 = 4 \Leftrightarrow x=-4\)</span>) were considered to be absurb by Greek mathematicians. Even as late as the 16th century, negative numbers were, in academic work, sometimes still referred to as <em>absurd numbers</em>.</p>
+<p>However, even for simple accounting purposes, such as a decrease in your stock of apples, a debt to a counterparty, and so on, the uses of negative numbers became ever more apparant. Nowadays, negative numbers are recognised as an integral part of everyday calculations.</p>
+<p>There are seven important things to remember about negative numbers:</p>
+<ol type="1">
+<li>We denote negative numbers by placing the minus sign (<span class="math inline">\(-\)</span>) in front of the number. So <span class="math inline">\(-4\)</span> denotes negative four. Positive numbers, on the other hand, are either denoted by placing the plus sign (<span class="math inline">\(+\)</span>) in front of it or by not writing down the sign altogether (more common). So both <span class="math inline">\(4\)</span> and <span class="math inline">\(+4\)</span> denote positive four, where <span class="math inline">\(4\)</span> is the more common notation.</li>
+<li>Adding up negative <span class="math inline">\(x\)</span> and positive <span class="math inline">\(x\)</span>, where <span class="math inline">\(x\)</span> is a number, yields zero: they are opposite numbers that cancel when added up. So <span class="math inline">\(-x+x=0\)</span>.</li>
+<li>The <em>more negative</em> a number is, the <em>smaller</em> it is. So, for example, <span class="math inline">\(-5 &lt; -4\)</span>, while on the positive side, <span class="math inline">\(5 &gt; 4\)</span>.</li>
+<li>The negative of a negative number is a positive number. That is, <span class="math inline">\(-(-x)=x\)</span>.</li>
+<li>A negative number <span class="math inline">\(-x\)</span> times another negative number <span class="math inline">\(-y\)</span> yields a positive number, which is equal to multiplying <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So <span class="math inline">\(-4\)</span> times <span class="math inline">\(-3\)</span> yields the same result as <span class="math inline">\(4\)</span> times <span class="math inline">\(3\)</span>, which is <span class="math inline">\(12\)</span>.</li>
+<li>A negative number <span class="math inline">\(-x\)</span> times a positive number <span class="math inline">\(y\)</span> yields a negative result, which is equal to the negative of multiplying <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So <span class="math inline">\(-4\)</span> times <span class="math inline">\(3\)</span> equals the negative of <span class="math inline">\(4\)</span> times <span class="math inline">\(3\)</span>, so <span class="math inline">\(-12\)</span>.</li>
+<li>A negative number <span class="math inline">\(-x\)</span> can also be thought of as <span class="math inline">\(x\)</span> multiplied by <span class="math inline">\(-1\)</span>. So simply using (<em>i</em>) all positive numbers, (<em>ii</em>) multiplication, and (<em>iii</em>) only a single negative number, namely <span class="math inline">\(-1\)</span>, we have a way to describe <em>all</em> negative numbers that exist.</li>
+</ol>
 </section>
 <section id="infinity" class="level3">
 <h3 class="anchored" data-anchor-id="infinity">Infinity</h3>
-<p>tba</p>
-<p>Notation all integers, all the way from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>: <span class="math inline">\(\mathbb{Z}\)</span></p>
+<p>The introduction of negative numbers is what we call an <em>abstraction</em>: we started with something clearly rooted in our understanding of reality at the time (i.e., counts), and we made the concept a bit more general (i.e., negative numbers), to help us solve more problems, that are still relevant in everyday life (e.g., keeping track of someone’s debt).</p>
+<p>Two further abstractions that arose as mathematics matured were the number zero (which effectively says there is nothing to count) and the number infinity, denoted by <span class="math inline">\(\infty\)</span>. Clearly, in our everyday lives infinity does not exist: we live in finite world, with finite resources, finite energy, and so on.</p>
+<p>Yet, zero and infinity are extremely useful to calculate certain things: they are an crucial part of calculus (i.e., differentiation and integration), which is all about finding optimal points (e.g., how much crop to grow to maximise profit?), areas and volumes (e.g., what is the volume of a ball with radius <span class="math inline">\(r\)</span>?), as well as certain expectations (e.g., what is my expected profit, under all kinds of circumstances, that happen with different probabilities?).</p>
+<p>Just like any number <span class="math inline">\(x\)</span> has a negative counterpart <span class="math inline">\(-x\)</span>, so does <span class="math inline">\(\infty\)</span> have negative counterpart <span class="math inline">\(-\infty\)</span>.</p>
+<p>The complete set of all whole numbers, so both negative and positive, ranging from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, are called the <em>integers</em>. This set of numbers is sometimes denoted by <span class="math inline">\(\mathbb{Z}\)</span>. That is, <span class="math inline">\(\mathbb{Z}\)</span> consists of <span class="math inline">\(\ldots,-3,-2,-1,0,1,2,3,\ldots\)</span>, where the dots signify that numbers just keep on going on, all the way down to <span class="math inline">\(-\infty\)</span> on the left and all the way up to <span class="math inline">\(\infty\)</span> on the right.</p>
 </section>
 </section>
 <section id="rational-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="rational-numbers">Rational numbers</h2>
-<p>tba</p>
-<p>Notation <span class="math inline">\(\mathbb{Q}\)</span></p>
+<p>Another important class of numbers are so-called rational numbers. The reason for their invention is, again, very much rooted in our everyday experience. If you have a single apple to share equally with a friend, you both have half an apple. That is, you both have <span class="math inline">\(\frac{1}{2}\)</span>, where the upper term (here <span class="math inline">\(1\)</span>) is called the <em>numerator</em> (Dutch: teller) and the lower term (here <span class="math inline">\(2\)</span>) the <em>denominator</em> (Dutch: noemer).</p>
+<p>More generally, rational numbers are written in the form <span class="math inline">\(\frac{a}{b}\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are both integers (so including negative numbers). When considering counts (so <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> both being natural numbers), <span class="math inline">\(a\)</span> tells us how many units of one thing we have (e.g., the number of apples <span class="math inline">\(a\)</span>) and <span class="math inline">\(b\)</span> tells us across how many other units to divide this (e.g., the number of people <span class="math inline">\(b\)</span> who get to share thos <span class="math inline">\(a\)</span> apples).</p>
+<p>The complete set of all rational numbers, so <span class="math inline">\(\frac{a}{b}\)</span>, for any integer <span class="math inline">\(a\)</span> and any integer <span class="math inline">\(b\)</span>, is denoted by <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </section>
 <section id="irrational-numbers-and-real-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="irrational-numbers-and-real-numbers">Irrational numbers and real numbers</h2>
-<p>tba</p>
-<p>Notation <span class="math inline">\(\mathbb{R}\)</span></p>
+<p>In the past, it was thought <span class="math inline">\(\mathbb{Q}\)</span> contained all numbers in existence, even numbers such as <span class="math inline">\(\pi \approx 3.14\)</span>, which is defined as the ratio of the circumference (Dutch: omtrek) of a perfect circle, divided by twice its radius. However, it turns out there exist infinitely many numbers that cannot be expressed as the ratio of two integers. Such numbers are said to be <em>irrational</em>.</p>
+<p>For example, take a square with sides of length one, and calculate the length of a line that you draw from one corner of the square to the corner on the opposite side (i.e., you split the square into two identical triangles). That length, by Pythagoras’ Theorem, equals <span class="math inline">\(\sqrt{1^2 + 1^2}=\sqrt{2}\)</span>. However, that number cannot be described as the ratio of two whole numbers. Neverthless, Ancient Greek society considered the whole idea of irrational numbers to be blasphemy. They refused to accept evidence that <span class="math inline">\(\sqrt{2}\)</span> was irrational, and even forbade considering such numbers:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VmWVXOIQblM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>However, proof for the existence of irrational numbers is undeniable: they arise naturally in geometry, for instance, when considering the circumference of a circle or the hypotenuse (Dutch: schuine zijde) of right triangle (Dutch: rechthoekige driehoek). And they also arise in calculus, for instance, when we consider a number <span class="math inline">\(e\)</span>, such that the rate of change of <span class="math inline">\(e^x\)</span> with respect to <span class="math inline">\(x\)</span>, also equals <span class="math inline">\(e^x\)</span> (Euler’s number).</p>
+<p>Combining the irrational and rational numbers into a grand set of numbers, we arrive at the set of so-called <em>real numbers</em>, which is denoted <span class="math inline">\(\mathbb{R}\)</span>. This set contains any number on the number line from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, regardless of whether irrational or rational. The whole numbers are in fact the working horse of much of modern mathematics, including calculus.</p>
 </section>
 </section>
 <section id="variables-and-expressions" class="level1">
@@ -350,12 +371,20 @@ window.Quarto = {
 <section id="algebra" class="level1">
 <h1>Algebra</h1>
 <p>tba</p>
+<section id="mathematics-as-a-language" class="level2">
+<h2 class="anchored" data-anchor-id="mathematics-as-a-language">Mathematics as a language</h2>
+<p>tba</p>
+</section>
 <section id="variables-and-expressions-1" class="level2">
 <h2 class="anchored" data-anchor-id="variables-and-expressions-1">Variables and expressions</h2>
 <p>tba</p>
 </section>
 <section id="operators-and-order-of-operations" class="level2">
 <h2 class="anchored" data-anchor-id="operators-and-order-of-operations">Operators and order of operations</h2>
+<p>tba</p>
+</section>
+<section id="inverse-operations" class="level2">
+<h2 class="anchored" data-anchor-id="inverse-operations">Inverse operations</h2>
 <p>tba</p>
 </section>
 <section id="simplifying-expressions" class="level2">
@@ -396,6 +425,10 @@ window.Quarto = {
 </section>
 <section id="finding-the-roots-of-a-function" class="level2">
 <h2 class="anchored" data-anchor-id="finding-the-roots-of-a-function">Finding the roots of a function</h2>
+<p>tba</p>
+</section>
+<section id="inverse-functions" class="level2">
+<h2 class="anchored" data-anchor-id="inverse-functions">Inverse functions</h2>
 <p>tba</p>
 </section>
 </section>
