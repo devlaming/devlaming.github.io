@@ -196,6 +196,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#set-theory" id="toc-set-theory" class="nav-link" data-scroll-target="#set-theory">Set theory</a>
   <ul class="collapse">
+  <li><a href="#venn-diagrams" id="toc-venn-diagrams" class="nav-link" data-scroll-target="#venn-diagrams">Venn diagrams</a></li>
   <li><a href="#notation-for-sets" id="toc-notation-for-sets" class="nav-link" data-scroll-target="#notation-for-sets">Notation for sets</a></li>
   <li><a href="#finite-sets" id="toc-finite-sets" class="nav-link" data-scroll-target="#finite-sets">Finite sets</a></li>
   <li><a href="#infinite-sets" id="toc-infinite-sets" class="nav-link" data-scroll-target="#infinite-sets">Infinite sets</a></li>
@@ -340,7 +341,7 @@ window.Quarto = {
 <ol type="1">
 <li>We denote negative numbers by placing the minus sign (<span class="math inline">\(-\)</span>) in front of the number. So <span class="math inline">\(-4\)</span> denotes negative four. Positive numbers, on the other hand, are either denoted by placing the plus sign (<span class="math inline">\(+\)</span>) in front of it or by not writing down the sign altogether (more common). So both <span class="math inline">\(4\)</span> and <span class="math inline">\(+4\)</span> denote positive four, where <span class="math inline">\(4\)</span> is the more common notation.</li>
 <li>Adding up negative <span class="math inline">\(x\)</span> and positive <span class="math inline">\(x\)</span>, where <span class="math inline">\(x\)</span> is a number, yields zero: they are opposite numbers that cancel when added up. So <span class="math inline">\(-x+x=0\)</span>.</li>
-<li>The <em>more negative</em> a number is, the <em>smaller</em> it is. So, for example, <span class="math inline">\(-5 &lt; -4\)</span>, while on the positive side, <span class="math inline">\(5 &gt; 4\)</span>.</li>
+<li>The <em>more negative</em> a number is, the <em>lower</em> it is. So, for example, <span class="math inline">\(-5 &lt; -4\)</span>, while on the positive side, <span class="math inline">\(5 &gt; 4\)</span>. In words, we say <span class="math inline">\(-5\)</span> is less than <span class="math inline">\(-4\)</span>, while <span class="math inline">\(5\)</span> is greater than <span class="math inline">\(4\)</span>.</li>
 <li>The negative of a negative number is a positive number. That is, <span class="math inline">\(-(-x)=x\)</span>.</li>
 <li>A negative number <span class="math inline">\(-x\)</span> times another negative number <span class="math inline">\(-y\)</span> yields a positive number, which is equal to multiplying <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So <span class="math inline">\(-4\)</span> times <span class="math inline">\(-3\)</span> yields the same result as <span class="math inline">\(4\)</span> times <span class="math inline">\(3\)</span>, which is <span class="math inline">\(12\)</span>.</li>
 <li>A negative number <span class="math inline">\(-x\)</span> times a positive number <span class="math inline">\(y\)</span> yields a negative result, which is equal to the negative of multiplying <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So <span class="math inline">\(-4\)</span> times <span class="math inline">\(3\)</span> equals the negative of <span class="math inline">\(4\)</span> times <span class="math inline">\(3\)</span>, so <span class="math inline">\(-12\)</span>.</li>
@@ -376,15 +377,15 @@ window.Quarto = {
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VmWVXOIQblM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>However, proof for the existence of irrational numbers is undeniable. And, as discussed, they arise naturally in geometry as well as calculus, for instance, when we consider a number <span class="math inline">\(e\)</span>, such that the rate of change of <span class="math inline">\(e^x\)</span> with respect to <span class="math inline">\(x\)</span>, also equals <span class="math inline">\(e^x\)</span> (<a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler’s number</a>).</p>
 <p>Combining the irrational and rational numbers into a grand set of numbers, we arrive at the set of so-called <em>real numbers</em>, which is denoted by <span class="math inline">\(\mathbb{R}\)</span>. This set contains any number on the number line from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, regardless of whether irrational or rational. The whole numbers are in fact the working horse of much of modern mathematics, including calculus.</p>
-<p>Have a look here for a short proof of why <span class="math inline">\(\sqrt{2}\)</span> is indeed irrational, and pay attention to the mathematical tools employed there (such as proof by contradiction). Pretty neat, isn’t it?</p>
+<p>Have a look at the YouTube video below, for a short proof of why <span class="math inline">\(\sqrt{2}\)</span> is indeed irrational. When watching it, pay close attention to the mathematical tools employed there (such as proof by contradiction). Pretty neat, isn’t it?</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/sbGjr_awePE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 </section>
 <section id="algebra" class="level1">
 <h1>Algebra</h1>
-<p>Now that numbers have been firmly established, we can turn our attention to algebra. An important forerunner of algebra is arithmetic (Dutch: rekenen), which you learnt about in primary school. Algebra, however, offers a more general prism through which to look at maths.</p>
-<p>Let’s contrast the two using a simple example. In a purely arithmetical problem, you might be asked to simplify <span class="math inline">\(\frac{1}{2} + \frac{1}{4}\)</span>, yielding <span class="math inline">\(\frac{3}{4}\)</span>. In an algebra problem, you instead might be asked to simplyify <span class="math inline">\(\frac{1}{x} + \frac{1}{2x}\)</span>, for any nonzero integer <span class="math inline">\(x\)</span>, yielding <span class="math inline">\(\frac{3}{2x}\)</span>. Notice: the specific case of <span class="math inline">\(x=2\)</span> boils down to the arithmetic problem from before!</p>
-<p>This shows the main similarity as well as their distinction. Arithmetic and algebra use the same basic rules to manipulate and simplify expressions. But, contrary to pure arithmetic, algebra also allows us to consider a free quantity, such as <span class="math inline">\(x\)</span>, or even multiple free quantities, such as <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p>Now that numbers have been firmly established, we can turn our attention to algebra. An important forerunner of algebra is arithmetic (Dutch: rekenen), which you learnt about in primary school. Algebra, however, offers a more general way to do maths.</p>
+<p>Let’s contrast the two using a simple example. In a purely arithmetical problem, you may be asked to simplify <span class="math inline">\(\frac{1}{2} + \frac{1}{4}\)</span>, yielding <span class="math inline">\(\frac{3}{4}\)</span>. In an algebra problem, you instead may be asked to simplyify <span class="math inline">\(\frac{1}{x} + \frac{1}{2x}\)</span>, for any nonzero integer <span class="math inline">\(x\)</span>, yielding <span class="math inline">\(\frac{3}{2x}\)</span>. Notice: the specific case of <span class="math inline">\(x=2\)</span> boils down to the arithmetic problem from before!</p>
+<p>This shows the main similarity as well as their distinction. Arithmetic and algebra use the same basic rules to manipulate and simplify expressions. But, contrary to pure arithmetic, algebra also allows us to consider a <em>free</em> or <em>unknown</em> quantity like <span class="math inline">\(x\)</span>, or even multiple such quantities (e.g., <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>).</p>
 <section id="variables-and-expressions" class="level2">
 <h2 class="anchored" data-anchor-id="variables-and-expressions">Variables and expressions</h2>
 <p>tba</p>
@@ -449,8 +450,16 @@ window.Quarto = {
 <section id="set-theory" class="level1">
 <h1>Set theory</h1>
 <p>At this stage, you have already seen a few sets, such as the set of real numbers, <span class="math inline">\(\mathbb{R}\)</span>. Like the way in which numbers initially derived from our everyday experience, so did sets.</p>
+<section id="venn-diagrams" class="level2">
+<h2 class="anchored" data-anchor-id="venn-diagrams">Venn diagrams</h2>
+<p>tba</p>
+</section>
 <section id="notation-for-sets" class="level2">
 <h2 class="anchored" data-anchor-id="notation-for-sets">Notation for sets</h2>
+<p>tba</p>
+<p><span class="math inline">\(a \in A\)</span></p>
+<p><span class="math inline">\(A \subset B\)</span></p>
+<p><span class="math inline">\(A \subseteq B\)</span></p>
 </section>
 <section id="finite-sets" class="level2">
 <h2 class="anchored" data-anchor-id="finite-sets">Finite sets</h2>
