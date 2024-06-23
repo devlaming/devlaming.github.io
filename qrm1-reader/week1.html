@@ -175,10 +175,10 @@ window.Quarto = {
   <li><a href="#algebra" id="toc-algebra" class="nav-link" data-scroll-target="#algebra">Algebra</a>
   <ul class="collapse">
   <li><a href="#variables-and-expressions" id="toc-variables-and-expressions" class="nav-link" data-scroll-target="#variables-and-expressions">Variables and expressions</a></li>
+  <li><a href="#multiple-variables" id="toc-multiple-variables" class="nav-link" data-scroll-target="#multiple-variables">Multiple variables</a></li>
   <li><a href="#operators-and-order-of-operations" id="toc-operators-and-order-of-operations" class="nav-link" data-scroll-target="#operators-and-order-of-operations">Operators and order of operations</a></li>
   <li><a href="#inverse-operations" id="toc-inverse-operations" class="nav-link" data-scroll-target="#inverse-operations">Inverse operations</a></li>
   <li><a href="#simplifying-expressions" id="toc-simplifying-expressions" class="nav-link" data-scroll-target="#simplifying-expressions">Simplifying expressions</a></li>
-  <li><a href="#mathematics-as-a-language" id="toc-mathematics-as-a-language" class="nav-link" data-scroll-target="#mathematics-as-a-language">Mathematics as a language</a></li>
   </ul></li>
   <li><a href="#equations-and-inequalities" id="toc-equations-and-inequalities" class="nav-link" data-scroll-target="#equations-and-inequalities">Equations and inequalities</a>
   <ul class="collapse">
@@ -193,6 +193,10 @@ window.Quarto = {
   <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
   <li><a href="#finding-the-roots-of-a-function" id="toc-finding-the-roots-of-a-function" class="nav-link" data-scroll-target="#finding-the-roots-of-a-function">Finding the roots of a function</a></li>
   <li><a href="#inverse-functions" id="toc-inverse-functions" class="nav-link" data-scroll-target="#inverse-functions">Inverse functions</a></li>
+  </ul></li>
+  <li><a href="#mathematics-as-a-language" id="toc-mathematics-as-a-language" class="nav-link" data-scroll-target="#mathematics-as-a-language">Mathematics as a language</a>
+  <ul class="collapse">
+  <li><a href="#some-remarks-regarding-notation" id="toc-some-remarks-regarding-notation" class="nav-link" data-scroll-target="#some-remarks-regarding-notation">Some remarks regarding notation</a></li>
   </ul></li>
   <li><a href="#set-theory" id="toc-set-theory" class="nav-link" data-scroll-target="#set-theory">Set theory</a>
   <ul class="collapse">
@@ -373,7 +377,7 @@ window.Quarto = {
 <figcaption>Hypotenuse with irrational length</figcaption>
 </figure>
 </div>
-<p>That length, by Pythagoras’ Theorem, equals <span class="math inline">\(\sqrt{1^2 + 1^2}=\sqrt{2}\)</span>, which is number that also cannot be described as the ratio of two whole numbers. Nevertheless, the Pythagorean community in the ancient Greece considered the whole idea of irrational numbers to be heresy. They refused to accept that <span class="math inline">\(\sqrt{2}\)</span> was irrational, and attempted to suppress proofs of this claim:</p>
+<p>That length, by Pythagoras’ Theorem, equals <span class="math inline">\(\sqrt{1^2 + 1^2}=\sqrt{2}\)</span>, which is a number that also cannot be described as the ratio of two whole numbers. Nevertheless, the Pythagorean community in the ancient Greece considered the whole idea of irrational numbers to be heresy. They refused to accept that <span class="math inline">\(\sqrt{2}\)</span> was irrational, and attempted to suppress proofs of this claim:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VmWVXOIQblM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>However, proof for the existence of irrational numbers is undeniable. And, as discussed, they arise naturally in geometry as well as calculus, for instance, when we consider a number <span class="math inline">\(e\)</span>, such that the rate of change of <span class="math inline">\(e^x\)</span> with respect to <span class="math inline">\(x\)</span>, also equals <span class="math inline">\(e^x\)</span> (<a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">Euler’s number</a>).</p>
 <p>Combining the irrational and rational numbers into a grand set of numbers, we arrive at the set of so-called <em>real numbers</em>, which is denoted by <span class="math inline">\(\mathbb{R}\)</span>. This set contains any number on the number line from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, regardless of whether irrational or rational. The whole numbers are in fact the working horse of much of modern mathematics, including calculus.</p>
@@ -388,7 +392,24 @@ window.Quarto = {
 <p>This shows the main similarity as well as their distinction. Arithmetic and algebra use the same basic rules to manipulate and simplify expressions. But, contrary to pure arithmetic, algebra also allows us to consider a <em>free</em> or <em>unknown</em> quantity like <span class="math inline">\(x\)</span>, or even multiple such quantities (e.g., <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>).</p>
 <section id="variables-and-expressions" class="level2">
 <h2 class="anchored" data-anchor-id="variables-and-expressions">Variables and expressions</h2>
-<p>tba</p>
+<p>Clearly, at this point, we have already touched upon so-called <em>variables</em>: quantities that are free or unknown. For instance, <span class="math inline">\(x\)</span> could denote the number of units sold at a price of five euros per unit. Thus, revenue (Dutch: omzet) is then given by <span class="math inline">\(5x\)</span>. Here, <span class="math inline">\(5x\)</span> is an <em>expression</em> and <span class="math inline">\(x\)</span> a variable.</p>
+<p>As is the case in this example, the expressions you start with in certain analytical questions typically reflect something that has real-world meaning. In the example, the real-world meaning of <span class="math inline">\(5x\)</span> is that it reflects revenue.</p>
+<p>In case the production costs of <span class="math inline">\(x\)</span> units are <span class="math inline">\(3\)</span> euro per unit, then clearly <span class="math inline">\(3x\)</span> reflects total costs. This is another expression with a clear real-world meaning. Moreover, defining profit as revenue minus costs, <span class="math inline">\(5x - 3x\)</span> tells us what the profit is if <span class="math inline">\(x\)</span> units are produced and sold. This is yet another expression with real-world meaning. Notice that <span class="math inline">\(5x - 3x\)</span> is actually equal to <span class="math inline">\(2x\)</span>. In other words, by manipulating our expression for profit, we can find a simpler expression which states that profit is given by <span class="math inline">\(2x\)</span>.</p>
+<p>The main reason why you learn about algebra is to be able to simplify expressions in such a way. But why are we interested in simplified expressions? The exact purpose of that will become apparent later on. For now, it suffices to say that, in many situations in business and economics, we want to figure out, for instance, the optimal level of production, advertisement spending, and so on. And simple expressions are often much easier to solve than ones that unnecessarily complicated.</p>
+</section>
+<section id="multiple-variables" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-variables">Multiple variables</h2>
+<p>To illustrate the direction in which QRM1 will be going, let us now consider a slight generalisation of the previous example. Instead of selling at a known price of five euros per unit, let us also treat the selling price per unit as a free variable denoted by <span class="math inline">\(p\)</span>. Then, total revenue is given by <span class="math inline">\(p \times x\)</span> (often also denoted by <span class="math inline">\(p \cdot x\)</span>, or even more briefly <span class="math inline">\(px\)</span>). This expression has two variable: price <span class="math inline">\(p\)</span> and units sold <span class="math inline">\(x\)</span>.</p>
+<p>Now consider a company selling three types of products: <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span>, where <span class="math inline">\(x\)</span> denotes the number of units of <span class="math inline">\(X\)</span> that is sold, <span class="math inline">\(y\)</span> the number of units of <span class="math inline">\(Y\)</span>, and so on. Similarly, let <span class="math inline">\(p_X\)</span> denote the price per unit at which Product <span class="math inline">\(X\)</span> is sold, <span class="math inline">\(p_Y\)</span> the price per unit of <span class="math inline">\(Y\)</span>, and so on.</p>
+<p>Hence, the revenue from Product <span class="math inline">\(X\)</span> is given by <span class="math inline">\(p_X x\)</span>, the revenue from <span class="math inline">\(Y\)</span> by <span class="math inline">\(p_Y y\)</span>, and the revenue from <span class="math inline">\(Z\)</span> by <span class="math inline">\(p_Z z\)</span>. As a result, total revenue is given by the following expression:</p>
+<p><span class="math display">\[
+p_X x + p_Y y + p_Z z.
+\]</span></p>
+<p>This is an expression involving six variables. That may seem quite impressive. But if we evaluate that expression for specific quantities and prices, all it boils down are three distinct multiplications, and then adding up the resulting three terms. For instance, if <span class="math inline">\(p_X = 5\)</span>, <span class="math inline">\(p_Y=4\)</span>, and <span class="math inline">\(p_Z=3\)</span>, while <span class="math inline">\(x=3\)</span>, <span class="math inline">\(y=4\)</span>, and <span class="math inline">\(z=2\)</span>, then revenue is given by</p>
+<p><span class="math display">\[
+5 \cdot 3 + 4 \cdot 4 + 3 \cdot 2 = 15 + 16 + 6 = 37.
+\]</span></p>
+<p>At the end of this week’s reader, we will introduce the summation operator to write this type of expression more compactly. Such notation is, for instance, particularly useful in case one sells considerably more than just three distinct products.</p>
 </section>
 <section id="operators-and-order-of-operations" class="level2">
 <h2 class="anchored" data-anchor-id="operators-and-order-of-operations">Operators and order of operations</h2>
@@ -400,10 +421,6 @@ window.Quarto = {
 </section>
 <section id="simplifying-expressions" class="level2">
 <h2 class="anchored" data-anchor-id="simplifying-expressions">Simplifying expressions</h2>
-<p>tba</p>
-</section>
-<section id="mathematics-as-a-language" class="level2">
-<h2 class="anchored" data-anchor-id="mathematics-as-a-language">Mathematics as a language</h2>
 <p>tba</p>
 </section>
 </section>
@@ -445,6 +462,14 @@ window.Quarto = {
 <section id="inverse-functions" class="level2">
 <h2 class="anchored" data-anchor-id="inverse-functions">Inverse functions</h2>
 <p>tba</p>
+</section>
+</section>
+<section id="mathematics-as-a-language" class="level1">
+<h1>Mathematics as a language</h1>
+<p>tba; clearly convey that statements can be tought of as parts of phrases in English, Dutch, and many other languages, whereas equations, inequalities, and functions can be thought of as complete sentences. In other words: maths is a language. And just like you can rephrase written text, one can also rephrase mathematical statements.</p>
+<section id="some-remarks-regarding-notation" class="level2">
+<h2 class="anchored" data-anchor-id="some-remarks-regarding-notation">Some remarks regarding notation</h2>
+<p>tba; dots decimal separator; comma thousands separator; log/ln; cdot times; greek alphabet; letters; <span class="math inline">\(A \Rightarrow B\)</span>, <span class="math inline">\(B \rightarrow A\)</span>, <span class="math inline">\(A \Leftrightarrow B\)</span>.</p>
 </section>
 </section>
 <section id="set-theory" class="level1">
