@@ -36,10 +36,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -145,6 +147,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -176,9 +179,27 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#variables-and-expressions" id="toc-variables-and-expressions" class="nav-link" data-scroll-target="#variables-and-expressions">Variables and expressions</a></li>
   <li><a href="#multiple-variables" id="toc-multiple-variables" class="nav-link" data-scroll-target="#multiple-variables">Multiple variables</a></li>
-  <li><a href="#operators-and-order-of-operations" id="toc-operators-and-order-of-operations" class="nav-link" data-scroll-target="#operators-and-order-of-operations">Operators and order of operations</a></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators">Operators</a>
+  <ul class="collapse">
+  <li><a href="#addition" id="toc-addition" class="nav-link" data-scroll-target="#addition">Addition</a></li>
+  <li><a href="#subtraction" id="toc-subtraction" class="nav-link" data-scroll-target="#subtraction">Subtraction</a></li>
   <li><a href="#inverse-operations" id="toc-inverse-operations" class="nav-link" data-scroll-target="#inverse-operations">Inverse operations</a></li>
-  <li><a href="#simplifying-expressions" id="toc-simplifying-expressions" class="nav-link" data-scroll-target="#simplifying-expressions">Simplifying expressions</a></li>
+  <li><a href="#multiplication" id="toc-multiplication" class="nav-link" data-scroll-target="#multiplication">Multiplication</a></li>
+  <li><a href="#division" id="toc-division" class="nav-link" data-scroll-target="#division">Division</a></li>
+  <li><a href="#inverse-operations-revisited" id="toc-inverse-operations-revisited" class="nav-link" data-scroll-target="#inverse-operations-revisited">Inverse operations revisited</a></li>
+  <li><a href="#powers-and-exponents" id="toc-powers-and-exponents" class="nav-link" data-scroll-target="#powers-and-exponents">Powers and exponents</a></li>
+  <li><a href="#logarithms" id="toc-logarithms" class="nav-link" data-scroll-target="#logarithms">Logarithms</a></li>
+  <li><a href="#inverse-operations-revisited-again" id="toc-inverse-operations-revisited-again" class="nav-link" data-scroll-target="#inverse-operations-revisited-again">Inverse operations revisited… again!</a></li>
+  <li><a href="#parentheses-and-order-of-operations" id="toc-parentheses-and-order-of-operations" class="nav-link" data-scroll-target="#parentheses-and-order-of-operations">Parentheses and order of operations</a></li>
+  </ul></li>
+  <li><a href="#working-with-fractions" id="toc-working-with-fractions" class="nav-link" data-scroll-target="#working-with-fractions">Working with fractions</a>
+  <ul class="collapse">
+  <li><a href="#factorizations-and-prime-numbers" id="toc-factorizations-and-prime-numbers" class="nav-link" data-scroll-target="#factorizations-and-prime-numbers">Factorizations and prime numbers</a></li>
+  <li><a href="#simplifying-fractions" id="toc-simplifying-fractions" class="nav-link" data-scroll-target="#simplifying-fractions">Simplifying fractions</a></li>
+  <li><a href="#decimalising-fractions" id="toc-decimalising-fractions" class="nav-link" data-scroll-target="#decimalising-fractions">Decimalising fractions</a></li>
+  </ul></li>
+  <li><a href="#working-with-decimalised-fractions" id="toc-working-with-decimalised-fractions" class="nav-link" data-scroll-target="#working-with-decimalised-fractions">Working with decimalised fractions</a></li>
+  <li><a href="#simplifying-algebraic-expressions" id="toc-simplifying-algebraic-expressions" class="nav-link" data-scroll-target="#simplifying-algebraic-expressions">Simplifying algebraic expressions</a></li>
   </ul></li>
   <li><a href="#equations-and-inequalities" id="toc-equations-and-inequalities" class="nav-link" data-scroll-target="#equations-and-inequalities">Equations and inequalities</a>
   <ul class="collapse">
@@ -279,9 +300,15 @@ window.Quarto = {
 </section>
 <section id="binary-counting-system" class="level4">
 <h4 class="anchored" data-anchor-id="binary-counting-system">Binary counting system</h4>
-<p>At a fundamental level, computers, smartphones, and other electronic devices do not have ten fingers to keep track of quantities. Instead, information is stored and manipulated in the form of bits, which can be thought of as on/off-switches, in which we consider ‘on’ as being one unit more than ‘off’. This means the natural counting system for a computer is binary: each digit can be either <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, where <span class="math inline">\(0\)</span> is the smallest digit and <span class="math inline">\(1\)</span> the largest digit. And if we add one to that largest digit, we simply do so by introducing a new digit on the left, which we initialise at <span class="math inline">\(1\)</span>, while reseting the digit on the right to <span class="math inline">\(0\)</span>, and so on:</p>
+<p>At a fundamental level, computers, smartphones, and other electronic devices do not have ten fingers to keep track of quantities. Instead, information is stored and manipulated in the form of bits, which can be thought of as on/off-switches, in which we consider ‘on’ as being one unit more than ‘off’.</p>
+<p>As a result, the natural counting system for a computer is binary: each digit can be either <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, where <span class="math inline">\(0\)</span> is the smallest digit and <span class="math inline">\(1\)</span> the largest digit. And if we add one to that largest digit, we simply do so by introducing a new digit on the left, which we initialise at <span class="math inline">\(1\)</span>, while reseting the digit on the right to <span class="math inline">\(0\)</span>, and so on, as shown in <a href="#tbl-binary" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-binary" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Subsequent numbers using the decimal system vs.&nbsp;the binary system
+</figcaption>
+<div aria-describedby="tbl-binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-striped table-hover caption-top table">
-<caption>Subsequent numbers using the decimal system vs.&nbsp;the binary system</caption>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Decimal</th>
@@ -335,6 +362,9 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 </section>
 </section>
 <section id="negative-numbers" class="level3">
@@ -343,7 +373,7 @@ window.Quarto = {
 <p>However, even for simple accounting purposes, such as a decrease in your stock of apples, a debt to a counterparty, and so on, the uses of negative numbers became ever more apparant. Nowadays, negative numbers are recognised as an integral part of everyday calculations.</p>
 <p>There are seven important things to remember about negative numbers:</p>
 <ol type="1">
-<li>We denote negative numbers by placing the minus sign (<span class="math inline">\(-\)</span>) in front of the number. So <span class="math inline">\(-4\)</span> denotes negative four. Positive numbers, on the other hand, are either denoted by placing the plus sign (<span class="math inline">\(+\)</span>) in front of it or by not writing down the sign altogether (more common). So both <span class="math inline">\(4\)</span> and <span class="math inline">\(+4\)</span> denote positive four, where <span class="math inline">\(4\)</span> is the more common notation.</li>
+<li>We denote negative numbers by placing the minus sign (<span class="math inline">\(-\)</span>) in front of the number. So <span class="math inline">\(-4\)</span> denotes negative four. Positive numbers, on the other hand, are either denoted by placing the plus sign (<span class="math inline">\(+\)</span>) in front of it or by not writing down the sign altogether (more common, just like in spoken language; e.g., we typically do not ask for plus four slices of bread). So both <span class="math inline">\(4\)</span> and <span class="math inline">\(+4\)</span> denote positive four, where <span class="math inline">\(4\)</span> is the more common notation.</li>
 <li>Adding up negative <span class="math inline">\(x\)</span> and positive <span class="math inline">\(x\)</span>, where <span class="math inline">\(x\)</span> is a number, yields zero: they are opposite numbers that cancel when added up. So <span class="math inline">\(-x+x=0\)</span>.</li>
 <li>The <em>more negative</em> a number is, the <em>lower</em> it is. So, for example, <span class="math inline">\(-5 &lt; -4\)</span>, while on the positive side, <span class="math inline">\(5 &gt; 4\)</span>. In words, we say <span class="math inline">\(-5\)</span> is less than <span class="math inline">\(-4\)</span>, while <span class="math inline">\(5\)</span> is greater than <span class="math inline">\(4\)</span>.</li>
 <li>The negative of a negative number is a positive number. That is, <span class="math inline">\(-(-x)=x\)</span>.</li>
@@ -401,7 +431,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="multiple-variables">Multiple variables</h2>
 <p>To illustrate the direction in which QRM1 will be going, let us now consider a slight generalisation of the previous example. Instead of selling at a known price of five euros per unit, let us also treat the selling price per unit as a free variable denoted by <span class="math inline">\(p\)</span>. Then, total revenue is given by <span class="math inline">\(p \times x\)</span> (often also denoted by <span class="math inline">\(p \cdot x\)</span>, or even more briefly <span class="math inline">\(px\)</span>). This expression has two variable: price <span class="math inline">\(p\)</span> and units sold <span class="math inline">\(x\)</span>.</p>
 <p>Now consider a company selling three types of products: <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span>, where <span class="math inline">\(x\)</span> denotes the number of units of <span class="math inline">\(X\)</span> that is sold, <span class="math inline">\(y\)</span> the number of units of <span class="math inline">\(Y\)</span>, and so on. Similarly, let <span class="math inline">\(p_X\)</span> denote the price per unit at which Product <span class="math inline">\(X\)</span> is sold, <span class="math inline">\(p_Y\)</span> the price per unit of <span class="math inline">\(Y\)</span>, and so on.</p>
-<p>Hence, the revenue from Product <span class="math inline">\(X\)</span> is given by <span class="math inline">\(p_X x\)</span>, the revenue from <span class="math inline">\(Y\)</span> by <span class="math inline">\(p_Y y\)</span>, and the revenue from <span class="math inline">\(Z\)</span> by <span class="math inline">\(p_Z z\)</span>. As a result, total revenue is given by the following expression:</p>
+<p>Hence, the revenue from Product <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span> is given by <span class="math inline">\(p_X x\)</span>, <span class="math inline">\(p_Y y\)</span>, and <span class="math inline">\(p_Z z\)</span> respectively. As a result, total revenue is given by the following expression:</p>
 <p><span class="math display">\[
 p_X x + p_Y y + p_Z z.
 \]</span></p>
@@ -411,17 +441,227 @@ p_X x + p_Y y + p_Z z.
 \]</span></p>
 <p>At the end of this week’s reader, we will introduce the summation operator to write this type of expression more compactly. Such notation is, for instance, particularly useful in case one sells considerably more than just three distinct products.</p>
 </section>
-<section id="operators-and-order-of-operations" class="level2">
-<h2 class="anchored" data-anchor-id="operators-and-order-of-operations">Operators and order of operations</h2>
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">Operators</h2>
+<p>Obviously, by this stage, we have already touched upon multiplication, division, addition, and subtraction, which are all so-called operators. Knowing how to apply these operators to reasonably large numbers by hand gives you a firm understanding of arithmetic, and thereby paves the way for a solid understanding of algebra. We encourage you to watch the videos in this section, and to work on the exercises.</p>
+<section id="addition" class="level3">
+<h3 class="anchored" data-anchor-id="addition">Addition</h3>
+<p>Here is a nice little video of how to add two or more numbers with multiple digits:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/mAvuom42NyY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Now consider the following exercises:</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the approach explained in the preceding video,</p>
+<ol type="1">
+<li>calculate <span class="math inline">\(16 + 3\)</span></li>
+<li>calculate <span class="math inline">\(28 + 4\)</span></li>
+<li>calculate <span class="math inline">\(91 + 9\)</span></li>
+<li>calculate <span class="math inline">\(667 + 3\)</span></li>
+<li>calculate <span class="math inline">\(995 + 6\)</span></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the same approach,</p>
+<ol type="1">
+<li>calculate <span class="math inline">\(16 + 23\)</span></li>
+<li>calculate <span class="math inline">\(27 + 38\)</span></li>
+<li>calculate <span class="math inline">\(48 + 71\)</span></li>
+<li>calculate <span class="math inline">\(63 + 48\)</span></li>
+<li>calculate <span class="math inline">\(667 + 333\)</span></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the same approach,</p>
+<ol type="1">
+<li>add five questions about adding three numbers</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions Exercises 1–3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use a calculator to check if your solutions are correct <span class="emoji" data-emoji="wink">😉</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using the same type of approach, but now considering a binary system, in which the lowest and highest digit are <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> respectively,</p>
+<ol type="1">
+<li>add <span class="math inline">\(1\)</span> and <span class="math inline">\(1\)</span></li>
+<li>add <span class="math inline">\(10\)</span> and <span class="math inline">\(1\)</span></li>
+<li>add <span class="math inline">\(11\)</span> and <span class="math inline">\(1\)</span></li>
+<li>add <span class="math inline">\(10\)</span> and <span class="math inline">\(10\)</span></li>
+<li>add <span class="math inline">\(11\)</span> and <span class="math inline">\(11\)</span></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions Exercises 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Since <span class="math inline">\(1+1\)</span> would excheed highest permitted digit (i.e., <span class="math inline">\(2\)</span> cannot happen under a binary system), we need to carry <span class="math inline">\(1\)</span> the next digit. And since the original terms both do not contribute directly to the second digit, we get <span class="math inline">\(1+1=10\)</span>.</li>
+<li><span class="math inline">\(10+1=11\)</span></li>
+<li>For <span class="math inline">\(11+1\)</span>, when we add the first (i.e., right-most) digit of both numbers, we again exceed the highest premitted digit. So we can carry <span class="math inline">\(1\)</span> to the second digit. When that carried over digit is added to the second digit of <span class="math inline">\(11\)</span>, we again exceed the highest permitted digit, so we carry <span class="math inline">\(1\)</span> to the third digit, thus, yielding <span class="math inline">\(11+1=100\)</span>.</li>
+<li>Similar logic: <span class="math inline">\(10+10=100\)</span></li>
+<li>For <span class="math inline">\(11+11\)</span> adding the first digit of both numbers yields a <span class="math inline">\(0\)</span> and a <span class="math inline">\(1\)</span> that’s carried over to the next digit. There, adding up the 2nd digit of both terms <em>and</em> the carry-over <span class="math inline">\(1\)</span>, we would get <span class="math inline">\(3\)</span> under a decimal system; but this is a binary system… So we hit another carry-over <span class="math inline">\(1\)</span>, which will go to the third digit, and the second digit itself being <span class="math inline">\(1\)</span>. Thus, we get <span class="math inline">\(11+11=110\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using <a href="#tbl-binary" class="quarto-xref">Table&nbsp;1</a>, convert all binary numbers in the previous to decimal numbers, add up those decimal numbers, and then convert the resulting numbers to binary numbers again using <a href="#tbl-binary" class="quarto-xref">Table&nbsp;1</a>. Compare the result to answers you obtained in Exercise 4. What do you conclude?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions Exercises 5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Decimal representation: <span class="math inline">\(1+1=2\)</span>, where the result has binary representation <span class="math inline">\(10\)</span></li>
+<li>Decimal representation: <span class="math inline">\(2+1=3\)</span>, where the result has binary representation <span class="math inline">\(11\)</span></li>
+<li>Decimal representation: <span class="math inline">\(3+1=4\)</span>, where the result has binary representation <span class="math inline">\(100\)</span></li>
+<li>Decimal representation: <span class="math inline">\(2+2=4\)</span>, where the result has binary representation <span class="math inline">\(100\)</span></li>
+<li>Decimal representation: <span class="math inline">\(3+3=6\)</span>, where the result has binary representation <span class="math inline">\(110\)</span></li>
+</ol>
+<p>Conclusion: the addition of the numbers under a binary of decimal system yields completely equivalent results! The only thing that changes is <em>how</em> we represent numbers, but not their properties, such as how addition works.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="subtraction" class="level3">
+<h3 class="anchored" data-anchor-id="subtraction">Subtraction</h3>
 <p>tba</p>
 </section>
-<section id="inverse-operations" class="level2">
-<h2 class="anchored" data-anchor-id="inverse-operations">Inverse operations</h2>
+<section id="inverse-operations" class="level3">
+<h3 class="anchored" data-anchor-id="inverse-operations">Inverse operations</h3>
 <p>tba</p>
 </section>
-<section id="simplifying-expressions" class="level2">
-<h2 class="anchored" data-anchor-id="simplifying-expressions">Simplifying expressions</h2>
+<section id="multiplication" class="level3">
+<h3 class="anchored" data-anchor-id="multiplication">Multiplication</h3>
+</section>
+<section id="division" class="level3">
+<h3 class="anchored" data-anchor-id="division">Division</h3>
+</section>
+<section id="inverse-operations-revisited" class="level3">
+<h3 class="anchored" data-anchor-id="inverse-operations-revisited">Inverse operations revisited</h3>
 <p>tba</p>
+</section>
+<section id="powers-and-exponents" class="level3">
+<h3 class="anchored" data-anchor-id="powers-and-exponents">Powers and exponents</h3>
+</section>
+<section id="logarithms" class="level3">
+<h3 class="anchored" data-anchor-id="logarithms">Logarithms</h3>
+</section>
+<section id="inverse-operations-revisited-again" class="level3">
+<h3 class="anchored" data-anchor-id="inverse-operations-revisited-again">Inverse operations revisited… again!</h3>
+<p>tba</p>
+</section>
+<section id="parentheses-and-order-of-operations" class="level3">
+<h3 class="anchored" data-anchor-id="parentheses-and-order-of-operations">Parentheses and order of operations</h3>
+</section>
+</section>
+<section id="working-with-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-fractions">Working with fractions</h2>
+<section id="factorizations-and-prime-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="factorizations-and-prime-numbers">Factorizations and prime numbers</h3>
+<section id="kgv-and-ggd" class="level4">
+<h4 class="anchored" data-anchor-id="kgv-and-ggd">kgv and ggd</h4>
+<p>Still, we feel a short treatment of these operators is warranted, especially in the contect of the order of operations.</p>
+<p>tba; make sure to add some exercises</p>
+<p>also add exponentiation, logarithm; tower of exponents</p>
+</section>
+</section>
+<section id="simplifying-fractions" class="level3">
+<h3 class="anchored" data-anchor-id="simplifying-fractions">Simplifying fractions</h3>
+<p><span class="math display">\[
+\frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{cb}{db} = \frac{ad + cb}{bd}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}
+\]</span></p>
+</section>
+<section id="decimalising-fractions" class="level3">
+<h3 class="anchored" data-anchor-id="decimalising-fractions">Decimalising fractions</h3>
+</section>
+</section>
+<section id="working-with-decimalised-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-decimalised-fractions">Working with decimalised fractions</h2>
+<p>tba</p>
+</section>
+<section id="simplifying-algebraic-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="simplifying-algebraic-expressions">Simplifying algebraic expressions</h2>
 </section>
 </section>
 <section id="equations-and-inequalities" class="level1">
@@ -543,6 +783,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
